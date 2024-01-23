@@ -11,3 +11,19 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("make-it-static");
   }
 });
+
+const closeMenuButton = document.querySelector(
+  ".nav-bar-close-button-container button",
+);
+const navSection = document.querySelector(".nav-bar-section");
+const openMenuButton = document.querySelector(".mobile-nav-menu-button");
+
+closeMenuButton.addEventListener("click", () => {
+  navSection.classList.remove("click-nav-open-button");
+  navSection.classList.add("click-nav-close-button");
+});
+
+openMenuButton.addEventListener("click", () => {
+  navSection.classList.remove("click-nav-close-button");
+  navSection.classList.add("click-nav-open-button");
+});

@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
 
-/* GENERAL STYLES */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,19 +9,10 @@ img {
   width: 100%;
 }
 
-h1,
-h2,
-h3,
-p {
-  margin-top: 0;
-}
-
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
 }
-
-/* NAV BAR */
 
 .nav-header {
   width: 85%;
@@ -163,8 +152,6 @@ body {
   background: #622edb;
 }
 
-/* ------------------------------------------------------- */
-
 .nav-header {
   background: #fff;
 }
@@ -187,10 +174,108 @@ body {
   position: static;
 }
 
-/* landing page content */
-
 .page-image-container {
   background-image: url(../assets/man-on-laptop-0.jpg);
   background-size: cover;
   min-height: calc(100vh - 110px);
+}
+
+.title-info-container-mobile {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .nav-bar-close-button-container button,
+  .mobile-nav-button-container button {
+    display: flex;
+  }
+
+  .page-title-info-container * {
+    display: none;
+  }
+
+  .mobile-nav-button-container,
+  .mobile-nav-button-container * {
+    display: block;
+  }
+
+  .nav-bar,
+  .nav-bar ul {
+    flex-direction: column;
+  }
+
+  .nav-bar-section {
+    border-left: 2px solid #211641ff;
+    background: rgb(33 22 65 / 75%);
+    align-items: flex-start;
+    backdrop-filter: blur(50px);
+    gap: 1em;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    transform: translateX(100%);
+  }
+
+  .nav-bar-close-button-container {
+    order: 2;
+  }
+
+  .nav-bar {
+    background: rgb(33 22 65 / 0%);
+    position: relative;
+    height: 100vh;
+    justify-content: flex-start;
+    gap: 1em;
+  }
+
+  .nav-bar a {
+    border-radius: 5px;
+  }
+
+  .icon-nav-container ul {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .click-nav-open-button {
+    transform: translateX(0%);
+    transition: transform 350ms ease-in;
+  }
+
+  .click-nav-close-button {
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+
+  .title-info-container-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title-info-container-mobile > div {
+    padding: 1em 0;
+  }
+
+  .page-titile-info-icon-container {
+    border: 1px solid #fff;
+  }
+
+  .logo-section {
+    height: 60px;
+  }
+}
+
+@media (max-width: 550px) {
+  .nav-bar-section {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 350px) {
+  .nav-bar-section {
+    width: 90vw;
+  }
 }
