@@ -205,6 +205,8 @@ body {
   }
 
   .nav-bar-section {
+    /* overflow-x: hidden; */
+    /* overflow-y: scroll; */
     border-left: 2px solid #211641ff;
     background: rgb(33 22 65 / 75%);
     align-items: flex-start;
@@ -266,6 +268,10 @@ body {
   .logo-section {
     height: 60px;
   }
+
+  .page-image-container {
+    min-height: calc(100vh - 60px);
+  }
 }
 
 @media (max-width: 550px) {
@@ -277,5 +283,131 @@ body {
 @media (max-width: 350px) {
   .nav-bar-section {
     width: 90vw;
+  }
+}
+
+.page-image-content-container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.landing-page-phrase {
+  color: #211641ff;
+  font-size: 1.4rem;
+  padding-top: 20vh;
+  padding-bottom: 1em;
+}
+
+.our-services-button,
+.about-us-button {
+  all: unset;
+  display: block;
+  cursor: pointer;
+  background: #622edb;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 2px;
+  padding: 0.5em 1em;
+}
+
+.about-us-button {
+  color: #211641;
+  background: #fff;
+}
+
+.page-img-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+@media (min-width: 426px) {
+  .page-image-section {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .page-image-content-container {
+    width: 100%;
+  }
+
+  .landing-page-phrase {
+    padding-top: 30vh;
+    margin: 0 9em 0 auto;
+    font-size: 2rem;
+  }
+
+  .page-img-button-container {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 920px) {
+  .landing-page-phrase {
+    margin: 0 10em 0 auto;
+  }
+}
+
+@media (min-width: 1030px) {
+  .landing-page-phrase {
+    margin: 0 11em 0 auto;
+  }
+}
+
+@media (min-width: 1080px) {
+  .landing-page-phrase {
+    margin: 0 14em 0 auto;
+  }
+}
+
+.action-banner-section {
+  background: #211641;
+  color: #fff;
+}
+
+.action-banner {
+  padding: 2em;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.action-message-container :first-child {
+  font-size: 1rem;
+  padding-bottom: 0.4em;
+  font-weight: bold;
+}
+
+.action-message-container :last-child {
+  font-size: 0.7rem;
+  width: 80%;
+}
+
+.action-button-container button {
+  all: unset;
+  display: block;
+  cursor: pointer;
+  background: #622edb;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 2px;
+  padding: 0.5em 1em;
+}
+
+@media (min-width: 700px) {
+  .action-banner {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .action-message-container :last-child {
+    width: 100%;
   }
 }
