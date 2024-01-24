@@ -434,7 +434,9 @@ body {
 }
 
 .about-us-overview {
+  margin: 0 auto;
   margin-bottom: 2em;
+  max-width: 650px;
 }
 
 .about-us-underline {
@@ -442,12 +444,11 @@ body {
   margin: 1.8em auto;
   border-radius: 2px;
   height: 0.2rem;
+  max-width: 65px;
   background: #211641;
 }
 
 .about-us-specs {
-  /* display: flex; */
-  /* flex-direction: column; */
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -469,7 +470,6 @@ body {
 }
 
 .about-spec-2-wraper {
-  flex: 1;
   background-image: url(../assets/work-desk.jpeg);
   background-size: cover;
 }
@@ -487,5 +487,68 @@ body {
 @media (min-width: 760px) {
   .about-us-specs {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.project-section {
+  background-image: url(../assets/landscape.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.project-container-wrapper {
+  background: rgb(33 22 65 / 65%);
+  width: 100%;
+  height: 100%;
+}
+
+.project-container {
+  text-align: center;
+  width: 85%;
+  margin: 0 auto;
+  padding: 3em 0;
+  max-width: 1080px;
+  color: #fff;
+}
+
+.project-container > h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5em;
+}
+
+.project-container > p {
+  font-size: 0.65rem;
+  margin-bottom: 2.5em;
+}
+
+.project-metrics-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.project-metrics-container i {
+  font-size: 1.2rem;
+}
+
+.project-metrics-container h6 {
+  font-size: 1.5rem;
+}
+.project-metrics-container p {
+  font-size: 0.6rem;
+}
+
+.project-metric-1,
+.project-metric-2,
+.project-metric-3,
+.project-metric-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+@media (min-width: 760px) {
+  .project-metrics-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
