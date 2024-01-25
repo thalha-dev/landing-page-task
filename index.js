@@ -27,3 +27,16 @@ openMenuButton.addEventListener("click", () => {
   navSection.classList.remove("click-nav-close-button");
   navSection.classList.add("click-nav-open-button");
 });
+
+const navLinks = document.querySelectorAll(".nav-bar a");
+
+document.addEventListener("DOMContentLoaded", () => {
+  navLinks.forEach((x) => {
+    x.addEventListener("click", () => {
+      navLinks.forEach((other) => {
+        other.classList.remove("nav-item-selected");
+      });
+      x.classList.add("nav-item-selected");
+    });
+  });
+});
